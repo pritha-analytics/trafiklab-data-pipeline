@@ -34,7 +34,8 @@ CREATE TABLE TRAFIKLAB_DB.BRONZE.RAW_DEPARTURES (
 -- Create external stage pointing to your ADLS bronze container
 CREATE OR REPLACE STAGE TRAFIKLAB_DB.BRONZE.ADLS_STAGE
   URL = 'azure://strafiklabpb.blob.core.windows.net/bronze/'
-  CREDENTIALS = (AZURE_SAS_TOKEN = 'sv=2026-02-06&ss=b&srt=co&sp=rlyx&se=2027-05-20T18:59:48Z&st=2026-05-20T10:44:48Z&spr=https&sig=HqTuJj4Os93W%2Bz28qyNVbxzTwAHOHl4dZ49y0s9KiCw%3D');
+  CREDENTIALS = (AZURE_SAS_TOKEN = '<stored-in-key-vault>');
+  -- Note: Store actual token in Azure Key Vault, retrieve at runtime
 
 
   
