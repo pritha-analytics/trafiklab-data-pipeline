@@ -6,3 +6,5 @@ sources:
     schema: BRONZE
     tables:
       - name: RAW_STOPS
+      - name: RAW_ROUTES
+      - name: RAW_STOP_TIMES
