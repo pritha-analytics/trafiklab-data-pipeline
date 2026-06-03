@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: TRAFIKLAB_DB
+    schema: BRONZE
+    tables:
+      - name: RAW_STOPS
+      - name: RAW_ROUTES
+      - name: RAW_STOP_TIMES
