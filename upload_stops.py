@@ -1,12 +1,12 @@
+import os
 import requests
 import zipfile
 import io
 from azure.storage.filedatalake import DataLakeServiceClient
 
-# Credentials stored in Azure Key Vault
-TRAFIKLAB_KEY = "<trafiklab-static-key>"
+TRAFIKLAB_KEY = os.environ["TRAFIKLAB_KEY"]
 STORAGE_ACCOUNT = "strafiklabpb"
-STORAGE_KEY = "<adls-connection-string>"
+STORAGE_KEY = os.environ["ADLS_ACCOUNT_KEY"]
 
 # Download GTFS static zip from Trafiklab
 print("Downloading GTFS data from Trafiklab...")
