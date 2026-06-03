@@ -9,7 +9,7 @@ Get-Content $envFile | ForEach-Object {
 Set-Location $PSScriptRoot
 
 Write-Output "[$(Get-Date)] Step 1: Uploading stops to ADLS..."
-python "C:\Users\Subrata\Desktop\trafiklab-repo\upload_stops.py"
+& ".venv\Scripts\python.exe" "C:\Users\Subrata\Desktop\trafiklab-repo\upload_stops.py"
 
 Write-Output "[$(Get-Date)] Step 2: Running dbt models..."
 & ".venv\Scripts\dbt.exe" run
