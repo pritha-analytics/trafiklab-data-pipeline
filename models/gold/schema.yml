@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: fct_busiest_stops
+    description: "Top stops ranked by total departures"
+    columns:
+      - name: stop_id
+        description: "Unique stop identifier"
+        tests:
+          - not_null
+          - unique
+      - name: stop_name
+        description: "Name of the stop"
+        tests:
+          - not_null
+
+  - name: fct_departures_by_hour
+    description: "Total departures grouped by hour of day"
+    columns:
+      - name: departure_hour
+        description: "Hour of departure (0-23)"
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_routes_by_mode
+    description: "Routes grouped by transport mode"
+    columns:
+      - name: transport_mode
+        description: "Mode of transport e.g. Bus, Metro, Tram"
+        tests:
+          - not_null
